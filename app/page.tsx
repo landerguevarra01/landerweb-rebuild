@@ -1,13 +1,13 @@
-import About from "./about/page";
-import Blink from "./blinkproject/page";
-import Lander from "./lander/page";
-import MyImage from "./myimage/page";
-import Philsan from "./philsanproject/page";
-import Recently from "./recently/page";
-import Sansan from "./sansanproject/page";
-import Darkmode from "./darkmode/page";
-import Philrice from "./philriceproject/page";
-import Contact from "./contact/page";
+import About from "@/components/About";
+import Blink from "@/components/BlinkProject";
+import Lander from "@/components/Lander";
+import MyImage from "@/components/MyImage";
+import Philsan from "@/components/PhilsanProject";
+import Recently from "@/components/Recently";
+import Sansan from "@/components/SansanProject";
+import Darkmode from "@/components/DarkMode";
+import Philrice from "@/components/PhilriceProject";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
