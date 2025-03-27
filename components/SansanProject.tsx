@@ -66,7 +66,7 @@ export default function Sansan() {
         onMouseEnter={() => setHoveredButton(true)}
         onMouseLeave={() => setHoveredButton(false)}
       >
-        <Link href="/your-link" passHref>
+        <Link href="/sansan-web" passHref>
           <div className="flex items-center gap-4">
             <AnimatePresence>
               {hoveredButton && (

@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div className="flex flex-col w-full min-h-screen justify-center items-center overflow-hidden">
       <div className="max-w-[1440px] mx-auto px-4">
-        <div className="w-full flex flex-col gap-3 my-20">
+        <div className="w-full flex flex-col gap-3 my-8">
           <div className="flex flex-wrap gap-3">
             <div className="flex flex-col gap-3">
               <div className="flex flex-wrap gap-3">
