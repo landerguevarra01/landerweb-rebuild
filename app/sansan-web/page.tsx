@@ -1,19 +1,22 @@
 "use client";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function SansanWeb() {
   const [isHovered, setIsHovered] = useState(false);
+  const router = useRouter();
 
   return (
     <div className="w-full flex flex-col justify-center items-center">
       <div className="max-w-[1120px] h-auto flex flex-col justify-center items-center my-8">
-        <div className="py-8">
+        <div className="py-16">
           <motion.div
             className="flex justify-center items-center w-[56px] h-[56px] border-2 border-solid border-[#30363D] rounded-full cursor-pointer"
             onHoverStart={() => setIsHovered(true)}
             onHoverEnd={() => setIsHovered(false)}
+            onClick={() => router.push("/")} // Redirects to homepage on click
           >
             <svg
               width="12"
@@ -30,7 +33,7 @@ export default function SansanWeb() {
                     initial={{ pathLength: 0, opacity: 0 }}
                     animate={{ pathLength: 1, opacity: 1 }}
                     exit={{ pathLength: 0, opacity: 0 }}
-                    transition={{ duration: 0.25, ease: "easeInOut" }}
+                    transition={{ duration: 0.15, ease: "easeInOut" }}
                     d="M1 6H11"
                     stroke="white"
                     strokeLinecap="round"
@@ -44,7 +47,7 @@ export default function SansanWeb() {
                       initial={{ pathLength: 0, opacity: 0 }}
                       animate={{ pathLength: 1, opacity: 1 }}
                       exit={{ pathLength: 0, opacity: 0 }}
-                      transition={{ duration: 0.25, ease: "easeInOut" }}
+                      transition={{ duration: 0.15, ease: "easeInOut" }}
                       d="M11 1L1 11"
                       stroke="white"
                       strokeLinecap="round"
@@ -55,7 +58,7 @@ export default function SansanWeb() {
                       initial={{ pathLength: 0, opacity: 0 }}
                       animate={{ pathLength: 1, opacity: 1 }}
                       exit={{ pathLength: 0, opacity: 0 }}
-                      transition={{ duration: 0.25, ease: "easeInOut" }}
+                      transition={{ duration: 0.15, ease: "easeInOut" }}
                       d="M1 1L11 11"
                       stroke="white"
                       strokeLinecap="round"
@@ -182,6 +185,7 @@ export default function SansanWeb() {
                   alt="Hovered Image"
                   width={210}
                   height={317}
+                  unoptimized
                   className=""
                 />
               </div>

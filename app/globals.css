@@ -1,22 +1,34 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Millik";
+  src: url("/fonts/Millik.otf") format("opentype"),
+    url("/fonts/Millik.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Default to Dark Mode */
 :root {
   --background: #090C10;
   --foreground: #ededed;
+  --font-sans: var(--font-inter);
+  --font-millik: "Millik", sans-serif;
+  /* Update to Inter */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter);
+  /* Ensure Inter is applied */
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), sans-serif;
+  /* Use Inter */
   transition: background 0.3s ease, color 0.3s ease;
 }
 
@@ -24,4 +36,8 @@ body {
 body.light-mode {
   --background: #ffffff;
   --foreground: #171717;
+}
+
+.millik-font {
+  font-family: "Millik", sans-serif;
 }

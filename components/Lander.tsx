@@ -31,11 +31,12 @@ export default function Lander() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
-            className="text-[18px]"
+            className="text-[18px] font-sans leading-relaxed"
           >
-            👋 Hey there! I’m <span className="text-[32px]">Lander</span>, a
-            Front-end Web Developer who builds sleek, dynamic, and user-friendly
-            websites that just work.
+            👋 Hey there! I’m{" "}
+            <span className="text-[40px] millik-font leading-none">Lander</span>, a Front-end
+            Web Developer who builds sleek, dynamic, and user-friendly websites
+            that just work.
           </motion.p>
         </div>
       </motion.div>

@@ -23,11 +23,16 @@ export default function About() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
-            className="text-[18px]"
+            className="text-[18px] font-sans leading-relaxed"
           >
             Pioneering the Fusion of{" "}
-            <span className="text-[32px]">Aesthetics &</span>{" "}
-            <span className="text-[32px]">Functionality</span> in Digital Design
+            <span className="text-[40px] millik-font leading-none">
+              Aesthetics &
+            </span>{" "}
+            <span className="text-[40px] millik-font leading-none">
+              Functionality
+            </span>{" "}
+            in Digital Design
           </motion.p>
         </div>
       </motion.div>

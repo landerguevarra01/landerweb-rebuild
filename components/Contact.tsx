@@ -25,8 +25,8 @@ export default function Contact() {
           transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
           className="flex flex-col justify-start items-start text-start"
         >
-          <p className="text-[32px]">Let's Connect</p>
-          <p className="text-[18px]">
+          <p className="text-[40px] millik-font">Let's Connect</p>
+          <p className="text-[18px] font-sans">
             Have a project or just want to say hi? <br />
             Drop me a message! 🤙
           </p>
