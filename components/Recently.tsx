@@ -10,14 +10,14 @@ export default function Recently() {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       whileHover={{ scale: 1.02 }}
-      className="w-full h-full border-[2px] border-[#AEFA62] rounded-[30px] flex flex-col justify-center items-start p-8"
+      className="w-full h-full border-[2px] border-[#AEFA62] rounded-[30px] flex flex-col justify-center items-start p-8 gap-1"
       style={{ backgroundColor: "rgba(32, 47, 18, 0.5)" }}
     >
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-        className="text-white text-[18px] mb-2"
+        className="text-white text-[18px] mb-2 font-sans"
       >
         Recently watched
       </motion.p>
@@ -40,7 +40,7 @@ export default function Recently() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
-        className="text-[22px]"
+        className="text-[22px] millik-font"
       >
         Solo Leveling
       </motion.h1>
@@ -49,7 +49,7 @@ export default function Recently() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
-        className="text-[16px]"
+        className="text-[16px] font-sans"
       >
         2024
       </motion.h2>
