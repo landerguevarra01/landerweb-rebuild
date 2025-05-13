@@ -70,9 +70,11 @@ export default function SansanWeb() {
             </svg>
           </motion.div>
         </div>
-        <div className="grid grid-cols-2 py-8">
+        <div className="grid grid-cols-2 py-8 gap-4">
           <div className="flex flex-col gap-4">
-            <h1 className="text-[40px]">SanSan Personal Website</h1>
+            <h1 className="text-[40px]">
+              SanSan <span className="text-[#DB0102]">|</span> Personal Website
+            </h1>
             <p className="text-[32px]">
               A creative portfolio and digital space showcasing expertise in
               graphic design, branding, and digital artistry.

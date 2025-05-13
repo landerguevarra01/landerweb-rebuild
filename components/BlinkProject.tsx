@@ -66,7 +66,7 @@ export default function Blink() {
         onMouseEnter={() => setHoveredButton(true)}
         onMouseLeave={() => setHoveredButton(false)}
       >
-        <Link href="/your-link" passHref>
+        <Link href="/blinkproject" passHref>
           <div className="flex items-center gap-4">
             <AnimatePresence>
               {hoveredButton && (
