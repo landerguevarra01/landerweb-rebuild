@@ -18,14 +18,19 @@ export default function Lander() {
         transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
         className="grid grid-rows-2 justify-center items-center"
       >
+        {/* Replace circle with image */}
         <div className="flex justify-start items-center">
-          <motion.div
+          <motion.img
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
-            className="w-[84px] h-[84px] bg-[#d9d9d9] rounded-full"
+            src="/assets/LNDR LOGO@4x-8 1.png" // 👈 Replace with your actual image path
+            alt="Lander Profile"
+            className="w-[110px] h-auto object-cover"
           />
         </div>
+
+        {/* Text content */}
         <div className="flex justify-center items-center text-start">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -34,9 +39,9 @@ export default function Lander() {
             className="text-[18px] font-sans leading-relaxed"
           >
             👋 Hey there! I’m{" "}
-            <span className="text-[40px] millik-font leading-none">Lander</span>, a Front-end
-            Web Developer who builds sleek, dynamic, and user-friendly websites
-            that just work.
+            <span className="text-[40px] millik-font leading-none">Lander</span>
+            , a Front-end Web Developer who builds sleek, dynamic, and
+            user-friendly websites that just work.
           </motion.p>
         </div>
       </motion.div>

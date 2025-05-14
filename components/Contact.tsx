@@ -9,24 +9,24 @@ export default function Contact() {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       whileHover={{ scale: 1.02 }}
-      className="w-full h-full border-[2px] border-[#FA3ABF] rounded-[30px] flex items-center justify-start p-8"
+      className="w-full h-full border-2 border-[#FA3ABF] rounded-[30px] flex items-center justify-start p-6 sm:p-8"
       style={{ backgroundColor: "rgba(71, 16, 45, 0.5)" }}
     >
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
-        className="flex flex-col gap-8"
+        className="flex flex-col gap-6 sm:gap-8 w-full"
       >
-        {/* Heading Text */}
+        {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
-          className="flex flex-col justify-start items-start text-start"
+          className="flex flex-col items-start text-start"
         >
-          <p className="text-[40px] millik-font">Let's Connect</p>
-          <p className="text-[18px] font-sans">
+          <p className="text-3xl sm:text-[40px] millik-font">Let's Connect</p>
+          <p className="text-base sm:text-lg font-sans">
             Have a project or just want to say hi? <br />
             Drop me a message! 🤙
           </p>
@@ -39,17 +39,17 @@ export default function Contact() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.7 }}
           whileHover={{ scale: 1.05 }}
-          className="w-[390px] h-[56px] border-[2px] border-[#FA3ABF] rounded-[30px] flex items-center justify-start gap-2 p-2"
+          className="w-fit sm:w-fit h-[56px] border-2 border-[#FA3ABF] rounded-[30px] flex items-center justify-start gap-3 px-4 py-2"
           style={{ backgroundColor: "rgba(71, 16, 45, 0.5)" }}
         >
-          {/* Icon Container */}
+          {/* Icon */}
           <div
-            className="w-[40px] h-[40px] border-[2px] border-[#FA3ABF] rounded-full flex justify-center items-center"
+            className="w-8 h-8 sm:w-10 sm:h-10 border-2 border-[#FA3ABF] rounded-full flex justify-center items-center"
             style={{ backgroundColor: "rgba(71, 16, 45, 0.5)" }}
           >
             <svg
-              width="19"
-              height="19"
+              width="16"
+              height="16"
               viewBox="0 0 19 19"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -72,8 +72,9 @@ export default function Contact() {
           </div>
 
           {/* Email Text */}
-          <p className="text-[22px] font-semibold underline">
-            guevarralander0@gmail.com
+          <p className="text-[18px] sm:text-[22px] font-semibold underline break-all">
+            <span className="hidden sm:block">guevarralander0@gmail.com</span>
+            <span className="block sm:hidden">GMAIL</span>
           </p>
         </motion.a>
       </motion.div>
