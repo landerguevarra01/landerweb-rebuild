@@ -27,7 +27,7 @@ export default function Sansan() {
               {/* Image with Gradient Overlay */}
               <div className="relative">
                 <Image
-                  src="/assets/sansanwebsite.png"
+                  src="/assets/SanSan/sansanwebsite.png"
                   alt="Hovered Image"
                   width={210}
                   height={317}
@@ -46,7 +46,7 @@ export default function Sansan() {
               transition={{ duration: 0.2, ease: "easeInOut" }}
             >
               <Image
-                src="/assets/JAYSON_ANIMATED.gif"
+                src="/assets/SanSan/JAYSON_ANIMATED.gif"
                 alt="Default Image"
                 width={180}
                 height={100}
@@ -58,40 +58,39 @@ export default function Sansan() {
 
       {/* Motion Button (Now Above the Image) */}
       <motion.button
-        className={`absolute bottom-6 left-6 flex items-center justify-center border rounded-full transition-all duration-300 cursor-pointer z-10 ${
+        className={`absolute bottom-6 left-6 flex items-center justify-center border rounded-full transition-all cursor-pointer z-10 ${
           hoveredButton
             ? "w-[119px] h-[56px] bg-transparent border-solid border-2 border-white"
-            : "w-[56px] h-[56px]"
+            : "w-[56px] h-[56px] duration-1000"
         }`}
         onMouseEnter={() => setHoveredButton(true)}
         onMouseLeave={() => setHoveredButton(false)}
       >
-        <Link href="/sansan-web" passHref>
+        <Link href="/projects/SanSan-Portfolio" passHref>
           <div className="flex items-center gap-4">
             <AnimatePresence>
               {hoveredButton && (
                 <motion.span
                   className="ml-3 text-white text-xl whitespace-nowrap"
-                  initial={{ opacity: 0, x: -40 }}
+                  initial={{ opacity: 0, z: -40 }}
                   animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  transition={{ duration: 0.2, ease: "easeInOut" }}
+                  exit={{ opacity: 0, z: -20 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
                 >
                   Visit
                 </motion.span>
               )}
             </AnimatePresence>
 
-            {/* SVG is always visible, but moves on hover */}
+            {/* SVG rotates on hover */}
             <motion.svg
               width="12"
               height="12"
               viewBox="0 0 12 12"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              initial={false}
-              animate={{ x: hoveredButton ? 5 : 0 }} // Moves right slightly on hover
-              transition={{ duration: 0.2, ease: "easeInOut" }}
+              animate={{ rotate: hoveredButton ? 90 : 0 }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
             >
               <path
                 d="M1 11L11 1M11 1H1M11 1V11"

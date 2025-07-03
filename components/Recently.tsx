@@ -28,7 +28,7 @@ export default function Recently() {
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
       >
         <Image
-          src="/assets/image 6.png"
+          src="/assets/squid_game.jpg"
           alt="Solo Leveling 2024"
           width={66.2}
           height={99.3}
@@ -42,7 +42,7 @@ export default function Recently() {
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
         className="text-[22px] millik-font"
       >
-        Solo Leveling
+        Squid Game S3
       </motion.h1>
 
       <motion.h2
@@ -51,7 +51,7 @@ export default function Recently() {
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
         className="text-[16px] font-sans"
       >
-        2024
+        2025
       </motion.h2>
     </motion.div>
   );

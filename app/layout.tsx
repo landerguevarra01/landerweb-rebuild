@@ -19,7 +19,32 @@ const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Lander Guevarra | Developer",
   description:
-    " Hey there! I’m Lander, a Front-end Web Developer who builds sleek, dynamic, and user-friendly websites that just work.",
+    "Hey there! I’m Lander, a Front-end Web Developer who builds sleek, dynamic, and user-friendly websites that just work.",
+  openGraph: {
+    title: "Lander Guevarra | Developer",
+    description:
+      "Hey there! I’m Lander, a Front-end Web Developer who builds sleek, dynamic, and user-friendly websites that just work.",
+    url: "https://lndr-three.vercel.app",
+    siteName: "Lander Guevarra",
+    images: [
+      {
+        url: "https://lndr-three.vercel.app/SEO_Cover.jpg", // ✅ Replace with your actual image URL
+        width: 1200,
+        height: 630,
+        alt: "Lander Guevarra - Front-end Web Developer",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Lander Guevarra | Developer",
+    description:
+      "Hey there! I’m Lander, a Front-end Web Developer who builds sleek, dynamic, and user-friendly websites that just work.",
+    images: ["https://lndr-three.vercel.app/SEO_Cover.jpg"], // ✅ Replace with your actual image URL
+    creator: "@yourTwitterHandle", // optional
+  },
 };
 
 export default function RootLayout({

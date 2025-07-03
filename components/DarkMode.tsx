@@ -15,12 +15,19 @@ export default function Darkmode() {
   }, [isDarkMode]);
 
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      whileHover={{ scale: 1.02 }}
       className="w-full h-full border-[2px] border-[#E7C73B] rounded-[30px] flex flex-col justify-center items-center p-8"
       style={{ backgroundColor: "rgba(99, 67, 27, 0.5)" }}
     >
       {/* Toggle Button */}
-      <div
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, ease: "easeOut" }}
         className="w-[113px] h-[72px] bg-[#1f2228] border-2 border-[#E7C73B] rounded-full flex items-center px-2 cursor-pointer"
         onClick={() => setIsDarkMode((prev) => !prev)}
       >
@@ -45,7 +52,7 @@ export default function Darkmode() {
               initial={{ rotate: 0, scale: 1 }}
               animate={{ rotate: -360, scale: [1, 1.2, 1] }} // Rotate + pop-up effect
               transition={{
-                rotate: { duration: 0.5, ease: "easeInOut" },
+                rotate: { duration: 0.5, ease: "easeInOut", delay: 0.2 },
                 scale: { duration: 0.3, ease: "easeInOut" },
               }}
             >
@@ -84,7 +91,7 @@ export default function Darkmode() {
             </motion.svg>
           )}
         </motion.div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }

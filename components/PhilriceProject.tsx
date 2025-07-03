@@ -27,7 +27,7 @@ export default function Philrice() {
               {/* Image Wrapper (Scales) */}
               <div className="relative w-full h-full flex justify-center items-center">
                 <motion.img
-                  src="/assets/philricewebsite.png"
+                  src="/assets/Philrice/philricewebsite.png"
                   alt="Hovered Image"
                   width={570}
                   height={317}
@@ -51,7 +51,7 @@ export default function Philrice() {
               transition={{ duration: 0.2, ease: "easeInOut" }}
             >
               <Image
-                src="/assets/philrice.png"
+                src="/assets/Philrice/philrice.png"
                 alt="Default Image"
                 width={250}
                 height={100}
@@ -63,24 +63,24 @@ export default function Philrice() {
 
       {/* Motion Button */}
       <motion.button
-        className={`absolute bottom-6 left-6 flex items-center justify-center border rounded-full transition-all duration-300 cursor-pointer ${
+        className={`absolute bottom-6 left-6 flex items-center justify-center border rounded-full transition-all cursor-pointer ${
           hoveredButton
             ? "w-[119px] h-[56px] bg-transparent border-solid border-2 border-white"
-            : "w-[56px] h-[56px]"
+            : "w-[56px] h-[56px] duration-1000"
         }`}
         onMouseEnter={() => setHoveredButton(true)}
         onMouseLeave={() => setHoveredButton(false)}
       >
-        <Link href="/your-link" passHref>
+        <Link href="/projects/PhilRice-Event%20Website" passHref>
           <div className="flex items-center gap-4">
             <AnimatePresence>
               {hoveredButton && (
                 <motion.span
                   className="ml-3 text-white text-xl whitespace-nowrap"
-                  initial={{ opacity: 0, x: -40 }}
+                  initial={{ opacity: 0, z: -40 }}
                   animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  transition={{ duration: 0.2, ease: "easeInOut" }}
+                  exit={{ opacity: 0, z: -20 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
                 >
                   Visit
                 </motion.span>
@@ -94,8 +94,8 @@ export default function Philrice() {
               viewBox="0 0 12 12"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              animate={{ x: hoveredButton ? 5 : 0 }}
-              transition={{ duration: 0.2, ease: "easeInOut" }}
+              animate={{ rotate: hoveredButton ? 90 : 0 }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
             >
               <path
                 d="M1 11L11 1M11 1H1M11 1V11"
