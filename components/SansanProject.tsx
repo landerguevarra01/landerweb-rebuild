@@ -57,16 +57,16 @@ export default function Sansan() {
       </div>
 
       {/* Motion Button (Now Above the Image) */}
-      <motion.button
-        className={`absolute bottom-6 left-6 flex items-center justify-center border rounded-full transition-all cursor-pointer z-10 ${
-          hoveredButton
-            ? "w-[119px] h-[56px] bg-transparent border-solid border-2 border-white"
-            : "w-[56px] h-[56px] duration-1000"
-        }`}
-        onMouseEnter={() => setHoveredButton(true)}
-        onMouseLeave={() => setHoveredButton(false)}
-      >
-        <Link href="/projects/SanSan-Portfolio" passHref>
+      <Link href="/projects/SanSan-Portfolio" passHref>
+        <motion.button
+          className={`absolute bottom-6 left-6 flex items-center justify-center border rounded-full transition-all cursor-pointer z-10 ${
+            hoveredButton
+              ? "w-[119px] h-[56px] bg-transparent border-solid border-2 border-white"
+              : "w-[56px] h-[56px] duration-1000"
+          }`}
+          onMouseEnter={() => setHoveredButton(true)}
+          onMouseLeave={() => setHoveredButton(false)}
+        >
           <div className="flex items-center gap-4">
             <AnimatePresence>
               {hoveredButton && (
@@ -101,8 +101,8 @@ export default function Sansan() {
               />
             </motion.svg>
           </div>
-        </Link>
-      </motion.button>
+        </motion.button>
+      </Link>
     </div>
   );
 }
