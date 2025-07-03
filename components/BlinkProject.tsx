@@ -16,16 +16,16 @@ export default function Blink() {
       <div className="relative flex items-center justify-center">
         <AnimatePresence mode="wait">
           {hoveredButton ? (
-            <motion.div
-              key="hoveredImage"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ duration: 0.2, ease: "easeInOut" }}
-              className="relative w-full h-full"
-            >
-              {/* Image with Gradient Overlay */}
-              <div className="relative">
+            <div className="relative w-full h-full">
+              {/* Only scale the image */}
+              <motion.div
+                key="hoveredImage"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.2, ease: "easeInOut" }}
+                className="relative"
+              >
                 <Image
                   src="/assets/Blink/blinkwebsite.png"
                   alt="Hovered Image"
@@ -33,10 +33,11 @@ export default function Blink() {
                   height={317}
                   className="rounded-[15px] -rotate-[30deg] ml-[100px] mt-[90px]"
                 />
-                {/* Gradient Overlay */}
-                <div className="absolute bottom-0 left-0 mb-26 w-full h-[60%] bg-gradient-to-t from-[#000000]/100 to-[#0D1117]/0" />
-              </div>
-            </motion.div>
+              </motion.div>
+
+              {/* Keep gradient outside the scaling div */}
+              <div className="absolute bottom-0 left-0 mb-26 w-full h-[60%] bg-gradient-to-t from-[#000000]/100 to-[#0D1117]/0 pointer-events-none" />
+            </div>
           ) : (
             <motion.div
               key="defaultImage"

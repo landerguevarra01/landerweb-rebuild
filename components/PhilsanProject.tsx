@@ -16,16 +16,16 @@ export default function Philsan() {
       <div className="relative flex items-center justify-center">
         <AnimatePresence mode="wait">
           {hoveredButton ? (
-            <motion.div
-              key="hoveredImage"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ duration: 0.2, ease: "easeInOut" }}
-              className="relative w-full h-full"
-            >
-              {/* Image Wrapper (Scales) */}
-              <div className="relative w-full h-full flex justify-center items-center">
+            <div className="relative w-full h-full">
+              {/* Scaled image only */}
+              <motion.div
+                key="hoveredImage"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.2, ease: "easeInOut" }}
+                className="w-full h-full flex justify-center items-center"
+              >
                 <motion.img
                   src="/assets/Philsan/philsanwebsite.png"
                   alt="Hovered Image"
@@ -37,11 +37,11 @@ export default function Philsan() {
                   exit={{ scale: 0.9 }}
                   transition={{ duration: 0.2, ease: "easeInOut" }}
                 />
-              </div>
+              </motion.div>
 
-              {/* Gradient Overlay (Fixed & Covers 80% from Bottom) */}
-              <div className="absolute bottom-0 left-0 w-full h-[80%] bg-gradient-to-t from-[#000000]/100 to-[#0D1117]/0 pointer-events-none" />
-            </motion.div>
+              {/* Fixed gradient overlay – NOT affected by scaling */}
+              <div className="absolute bottom-0 left-0 w-full h-[80%] bg-gradient-to-t from-[#000000]/100 to-[#0D1117]/0 pointer-events-none z-10" />
+            </div>
           ) : (
             <motion.div
               key="defaultImage"
