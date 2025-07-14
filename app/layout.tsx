@@ -3,18 +3,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
+import Script from "next/script"; // ✅ Import Next.js Script component
 
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
-
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
 
 export const metadata: Metadata = {
   title: "Lander Guevarra | Developer",
@@ -28,7 +19,7 @@ export const metadata: Metadata = {
     siteName: "Lander Guevarra",
     images: [
       {
-        url: "https://lndr-three.vercel.app/SEO_Cover.jpg", // ✅ Replace with your actual image URL
+        url: "https://lndr-three.vercel.app/SEO_Cover.jpg",
         width: 1200,
         height: 630,
         alt: "Lander Guevarra - Front-end Web Developer",
@@ -42,16 +33,16 @@ export const metadata: Metadata = {
     title: "Lander Guevarra | Developer",
     description:
       "Hey there! I’m Lander, a Front-end Web Developer who builds sleek, dynamic, and user-friendly websites that just work.",
-    images: ["https://lndr-three.vercel.app/SEO_Cover.jpg"], // ✅ Replace with your actual image URL
-    creator: "@yourTwitterHandle", // optional
+    images: ["https://lndr-three.vercel.app/SEO_Cover.jpg"],
+    creator: "@yourTwitterHandle",
   },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body
@@ -60,6 +51,14 @@ export default function RootLayout({
       >
         {children}
         <Analytics />
+        <Script
+          src="https://code.jquery.com/jquery-3.6.0.min.js"
+          strategy="beforeInteractive"
+        />
+        <Script
+          src="https://cdn.jsdelivr.net/gh/sirxemic/jquery.ripples/dist/jquery.ripples-min.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );

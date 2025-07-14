@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function About() {
   return (
@@ -9,7 +10,7 @@ export default function About() {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       whileHover={{ scale: 1.02 }}
-      className="w-full h-full border-2 border-[#7069F6] rounded-[30px] flex items-start justify-center p-16 sm:p-12"
+      className="w-full h-full border-2 border-[#7069F6] rounded-[30px] flex flex-col justify-between items-start p-16 sm:p-12"
       style={{ backgroundColor: "rgba(48, 32, 137, 0.5)" }}
     >
       <motion.div
@@ -36,6 +37,13 @@ export default function About() {
           </motion.p>
         </div>
       </motion.div>
+      <Link href="/projects/Gallery" passHref>
+        <div className="border rounded-full px-8 py-1">
+          <h1 className="text-[16px] sm:text-[18px] font-sans leading-relaxed">
+            Gallery
+          </h1>
+        </div>
+      </Link>
     </motion.div>
   );
 }

@@ -8,10 +8,13 @@ import Sansan from "@/components/SansanProject";
 import Darkmode from "@/components/DarkMode";
 import Philrice from "@/components/PhilriceProject";
 import Contact from "@/components/Contact";
+import RippleEffect from "@/components/RippleEffects";
+import "./globals.css";
 
 export default function Home() {
   return (
-    <div className="flex flex-col w-full min-h-screen py-8 justify-center items-center overflow-hidden">
+    <div className="image jquery-ripples flex flex-col w-full min-h-screen py-8 justify-center items-center overflow-hidden">
+      <RippleEffect />
       <div className="max-w-[1440px] mx-auto px-4 flex flex-col gap-3">
         {/* Section 1 */}
         <div className="w-full grid grid-cols-1 lg:grid-cols-[3fr_1fr] gap-3">
