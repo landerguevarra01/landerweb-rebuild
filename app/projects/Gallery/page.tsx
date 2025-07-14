@@ -97,19 +97,48 @@ export default function Home() {
           </motion.div>
         </div>
         <div className="flex flex-col gap-16 py-16">
-          <h2 className="text-4xl font-semibold text-center mt-10 mb-2">
+          <motion.h2
+            className="text-4xl font-semibold text-center mt-10 mb-2"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
             Canvas of Snaps
-          </h2>
-          <p className="text-center max-w-xl mx-auto mb-8">
+          </motion.h2>
+
+          <motion.p
+            className="text-center max-w-xl mx-auto mb-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+          >
             A curated wall of captured moments, spontaneous frames, and
             behind-the-scenes glimpses that reflect our creative journey. Each
             image tells a story of purpose, passion, and production.
-          </p>
-          <div className="columns-3 gap-4">
+          </motion.p>
+
+          <motion.div
+            className="columns-3 gap-4"
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: {},
+              visible: {
+                transition: {
+                  staggerChildren: 0.1, // stagger each image
+                },
+              },
+            }}
+          >
             {shuffledGallery.map((src, index) => (
-              <div
+              <motion.div
                 key={index}
                 className="mb-4 break-inside-avoid overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+                variants={{
+                  hidden: { opacity: 0, scale: 0.95, y: 20 },
+                  visible: { opacity: 1, scale: 1, y: 0 },
+                }}
+                transition={{ duration: 0.4, ease: "easeOut" }}
               >
                 <img
                   src={src}
@@ -117,9 +146,9 @@ export default function Home() {
                   className="w-full h-auto object-cover transition-transform duration-300 hover:scale-105"
                   loading="lazy"
                 />
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
