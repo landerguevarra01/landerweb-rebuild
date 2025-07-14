@@ -97,9 +97,14 @@ export default function Home() {
           </motion.div>
         </div>
         <div className="flex flex-col gap-16 py-16">
-          <h1 className="text-3xl font-bold text-center mb-6">
+          <h2 className="text-4xl font-semibold text-center mt-10 mb-2">
             Canvas of Snaps
-          </h1>
+          </h2>
+          <p className="text-center max-w-xl mx-auto mb-8">
+            A curated wall of captured moments, spontaneous frames, and
+            behind-the-scenes glimpses that reflect our creative journey. Each
+            image tells a story of purpose, passion, and production.
+          </p>
           <div className="columns-3 gap-4">
             {shuffledGallery.map((src, index) => (
               <div
