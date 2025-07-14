@@ -62,53 +62,55 @@ export default function Philsan() {
       </div>
 
       {/* Motion Button */}
-      <Link href="/" passHref>
-        <motion.button
-          className={`absolute bottom-6 left-6 flex items-center justify-center border rounded-full transition-all cursor-pointer z-10 ${
-            hoveredButton
-              ? "w-[119px] h-[56px] bg-transparent border-solid border-2 border-white"
-              : "w-[56px] h-[56px] duration-1000"
-          }`}
-          onMouseEnter={() => setHoveredButton(true)}
-          onMouseLeave={() => setHoveredButton(false)}
-        >
-          {/* <Link href="/projects/PHILSAN-Event%20Website" passHref> */}
+      <Link href="https://philsan.org/" passHref legacyBehavior>
+        <a target="_blank" rel="noopener noreferrer">
+          <motion.button
+            className={`absolute bottom-6 left-6 flex items-center justify-center border rounded-full transition-all cursor-pointer z-10 ${
+              hoveredButton
+                ? "w-[119px] h-[56px] bg-transparent border-solid border-2 border-white"
+                : "w-[56px] h-[56px] duration-1000"
+            }`}
+            onMouseEnter={() => setHoveredButton(true)}
+            onMouseLeave={() => setHoveredButton(false)}
+          >
+            {/* <Link href="/projects/PHILSAN-Event%20Website" passHref> */}
 
-          <div className="flex items-center gap-4">
-            <AnimatePresence>
-              {hoveredButton && (
-                <motion.span
-                  className="ml-3 text-white text-xl whitespace-nowrap"
-                  initial={{ opacity: 0, z: -40 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, z: -20 }}
-                  transition={{ duration: 0.3, ease: "easeInOut" }}
-                >
-                  Visit
-                </motion.span>
-              )}
-            </AnimatePresence>
+            <div className="flex items-center gap-4">
+              <AnimatePresence>
+                {hoveredButton && (
+                  <motion.span
+                    className="ml-3 text-white text-xl whitespace-nowrap"
+                    initial={{ opacity: 0, z: -40 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, z: -20 }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                  >
+                    Visit
+                  </motion.span>
+                )}
+              </AnimatePresence>
 
-            {/* SVG rotates on hover */}
-            <motion.svg
-              width="12"
-              height="12"
-              viewBox="0 0 12 12"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              animate={{ rotate: hoveredButton ? 90 : 0 }}
-              transition={{ duration: 0.5, ease: "easeInOut" }}
-            >
-              <path
-                d="M1 11L11 1M11 1H1M11 1V11"
-                stroke="white"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </motion.svg>
-          </div>
-        </motion.button>
+              {/* SVG rotates on hover */}
+              <motion.svg
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                animate={{ rotate: hoveredButton ? 90 : 0 }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
+              >
+                <path
+                  d="M1 11L11 1M11 1H1M11 1V11"
+                  stroke="white"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </motion.svg>
+            </div>
+          </motion.button>
+        </a>
       </Link>
     </div>
   );
