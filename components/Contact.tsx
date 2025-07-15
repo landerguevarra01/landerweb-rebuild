@@ -83,13 +83,13 @@ export default function Contact() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
             whileHover={{ scale: 1.05 }}
-            className="w-fit sm:w-fit h-[56px] border-2 border-[#FA3ABF] rounded-[30px] flex items-center justify-start gap-3 px-4 py-2 cursor-pointer"
+            className="w-fit sm:w-fit h-[56px] border-2 border-[#FA3ABF] rounded-[30px] flex items-center justify-start gap-3 pl-2 pr-4 py-2 cursor-pointer"
             style={{ backgroundColor: "rgba(71, 16, 45, 0.5)" }}
           >
             {/* Icon */}
             <div
-              className="w-8 h-8 sm:w-10 sm:h-10 border-2 border-[#FA3ABF] rounded-full flex justify-center items-center"
-              style={{ backgroundColor: "rgba(71, 16, 45, 0.5)" }}
+              className="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex justify-center items-center"
+              style={{ backgroundColor: "rgba(71, 16, 45, 1)" }}
             >
               <svg
                 width="16"
