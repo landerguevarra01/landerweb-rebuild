@@ -28,7 +28,7 @@ export default function Recently() {
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
       >
         <Image
-          src="/assets/squid_game.jpg"
+          src="/assets/sandman.jpg"
           alt="Solo Leveling 2024"
           width={66.2}
           height={99.3}
@@ -42,7 +42,7 @@ export default function Recently() {
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
         className="text-[22px] millik-font"
       >
-        Squid Game S3
+        The Sandman S2
       </motion.h1>
 
       <motion.h2
