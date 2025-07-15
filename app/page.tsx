@@ -14,7 +14,7 @@ import "./globals.css";
 export default function Home() {
   return (
     <div className="image jquery-ripples flex flex-col w-full min-h-screen py-8 justify-center items-center overflow-hidden">
-      <video
+      {/* <video
         className="absolute top-0 left-0 w-full h-full object-cover -z-10"
         autoPlay
         muted
@@ -22,12 +22,12 @@ export default function Home() {
         playsInline
       >
         <source
-          // src="/assets/nebula-galaxy-loop-hd-2023-11-27-04-56-59-utc.mp4"
+          src="/assets/nebula-galaxy-loop-hd-2023-11-27-04-56-59-utc.mp4"
           src="/assets/nebula-galaxy-loop-hd-2023-11-27-05-06-46-utc.mp4"
           type="video/mp4"
         />
         Your browser does not support the video tag.
-      </video>
+      </video> */}
       <RippleEffect />
       <div className="max-w-[1440px] mx-auto px-4 flex flex-col gap-3">
         {/* Section 1 */}
